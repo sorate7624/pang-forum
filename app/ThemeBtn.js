@@ -2,6 +2,7 @@
 
 import { useRouter } from 'next/navigation';
 import { useEffect, useState } from 'react';
+import NavbarStyles from '@/styles/navbar.module.scss';
 
 export default function ThemeBtn() {
   let router = useRouter();
@@ -17,22 +18,23 @@ export default function ThemeBtn() {
       }
     }
   }, []);
+
+  const handlerThemeBtn = () => {
+    let cookie = `; ${document.cookie}`.split(`; theme=`).pop().split(';')[0];
+    if (cookie === 'light') {
+      document.cookie = `theme=dark; max-age=${3600 * 24 * 400}`;
+      setIsDarkMode(true);
+    } else {
+      document.cookie = `theme=light; max-age=${3600 * 24 * 400}`;
+      setIsDarkMode(false);
+    }
+    router.refresh();
+  };
+
   return (
     <button
-      onClick={() => {
-        let cookie = `; ${document.cookie}`
-          .split(`; theme=`)
-          .pop()
-          .split(';')[0];
-        if (cookie === 'light') {
-          document.cookie = `theme=dark; max-age=${3600 * 24 * 400}`;
-          setIsDarkMode(true);
-        } else {
-          document.cookie = `theme=light; max-age=${3600 * 24 * 400}`;
-          setIsDarkMode(false);
-        }
-        router.refresh();
-      }}
+      onClick={() => handlerThemeBtn()}
+      className={NavbarStyles['theme-btn']}
     >
       {isDarkMode ? <>☀️</> : <>🌙</>}
     </button>

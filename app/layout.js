@@ -1,3 +1,4 @@
+import './globals.css';
 import 'normalize.css/normalize.css';
 import { Roboto, Noto_Sans_KR } from 'next/font/google';
 import { cookies } from 'next/headers';

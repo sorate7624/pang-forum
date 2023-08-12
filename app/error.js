@@ -1,13 +1,21 @@
 'use client';
+
+import ErrorStyles from '@/styles/error.module.scss';
+
 export default function Error({ error, reset }) {
   return (
-    <div>
-      <h4>Error</h4>
-      <button
-        onClick={() => {
-          reset();
-        }}
-      ></button>
-    </div>
+    <main className={ErrorStyles['wrapper']}>
+      <div className={ErrorStyles['inner']}>
+        <h3 className={ErrorStyles['title']}>Error</h3>
+        <button
+          onClick={() => {
+            reset();
+          }}
+          className={ErrorStyles['refresh-btn']}
+        >
+          Refresh
+        </button>
+      </div>
+    </main>
   );
 }

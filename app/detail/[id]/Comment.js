@@ -1,6 +1,7 @@
 'use client';
 import { useRouter } from 'next/navigation';
 import { useEffect, useState } from 'react';
+import DetailStyles from '@/styles/detail.module.scss';
 
 export default function Comment({ _id }) {
   const router = useRouter();
@@ -28,6 +29,7 @@ export default function Comment({ _id }) {
       .then((response) => response.json())
       .then((newComment) => {
         // 새로운 댓글 정보를 기존 데이터 앞에 추가
+        console.log('newComment', newComment);
         setData((prevData) => [newComment, ...prevData]);
         setComment('');
       })
@@ -36,23 +38,42 @@ export default function Comment({ _id }) {
       });
   };
 
+  const handleKeyDown = (event) => {
+    if (event.key === 'Enter') {
+      event.preventDefault();
+      submitComment();
+    }
+  };
+
   return (
-    <div>
-      <hr />
+    <div className={DetailStyles['comment-area']}>
       {data.length > 0 ? (
         data.map((element, index) => {
-          return <p key={index}>{element.content}</p>;
+          return (
+            <p className={DetailStyles['comment']} key={index}>
+              <span>{element.author_name}:</span>
+              {element.content}
+            </p>
+          );
         })
       ) : (
-        <p>No comment</p>
+        <p className={DetailStyles['no-comment']}>No comment</p>
       )}
-      <input
-        defaultValue={comment}
-        onChange={(event) => {
-          setComment(event.target.value);
-        }}
-      />
-      <button onClick={submitComment}>Comment</button>
+      <div className={DetailStyles['comment-input-area']}>
+        <input
+          type="text"
+          defaultValue={comment}
+          onChange={(event) => {
+            setComment(event.target.value);
+          }}
+          placeholder="comment"
+          className={DetailStyles['input-text']}
+          onKeyDown={(event) => handleKeyDown(event)}
+        />
+        <button onClick={submitComment} className={DetailStyles['submit-btn']}>
+          Comment
+        </button>
+      </div>
     </div>
   );
 }

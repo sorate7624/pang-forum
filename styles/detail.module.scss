@@ -1,0 +1,60 @@
+.wrapper {
+  .detail-area {
+    display: flex;
+    flex-flow: column;
+    max-width: 500px;
+    margin: 0 auto;
+    padding-top: 30px;
+    text-align: left;
+
+    .detail-title {
+      margin: 0 0 30px;
+      font-weight: 700;
+      font-size: 16px;
+      color: $color-green5;
+    }
+
+    .detail-content {
+      margin: 0 0 20px;
+    }
+  }
+}
+
+.comment-area {
+  display: flex;
+  flex-flow: column;
+  border-top: 1px solid $color-green5;
+  margin-top: 30px;
+
+  .comment {
+    margin: 15px 0 0 0;
+
+    span {
+      margin-right: 8px;
+    }
+  }
+
+  .no-comment {
+    margin: 20px 0;
+    color: $color-green3;
+  }
+}
+
+.comment-input-area {
+  display: flex;
+  margin-top: 30px;
+
+  input {
+    width: 80%;
+    margin-right: 15px;
+  }
+
+  .submit-btn {
+    color: white;
+    background-color: $color-green5;
+
+    &:hover {
+      background-color: $color-green4;
+    }
+  }
+}

@@ -1,0 +1,60 @@
+.wrapper {
+  form {
+    display: flex;
+    flex-flow: column;
+    max-width: 500px;
+    margin: 0 auto;
+    padding-top: 30px;
+
+    .input-text {
+      height: 50px;
+      margin-bottom: 30px;
+    }
+
+    .role-area {
+      display: flex;
+      height: 50px;
+      background-color: rgba(255, 255, 255, 0.5);
+      margin-bottom: 30px;
+      justify-content: space-around;
+      align-items: center;
+      border-radius: 10px;
+
+      label {
+        width: 50%;
+        height: 100%;
+        border-right: 1px solid $color-green5;
+        line-height: 50px;
+        cursor: pointer;
+
+        &:last-child {
+          border: none;
+        }
+      }
+
+      input {
+        position: absolute;
+        display: none;
+
+        &:checked ~ * {
+          opacity: 1;
+        }
+      }
+
+      span {
+        color: $color-green5;
+        opacity: 0.2;
+      }
+    }
+
+    .submit-btn {
+      height: 50px;
+      background-color: $color-green5;
+      color: white;
+
+      &:hover {
+        background-color: $color-green4;
+      }
+    }
+  }
+}

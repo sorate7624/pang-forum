@@ -1,44 +1,57 @@
 'use client';
 
 import Link from 'next/link';
+import ListStyles from '@/styles/list.module.scss';
+import Image from 'next/image';
+import editIcon from '@/public/edit.png';
+import deleteIcon from '@/public/delete.png';
+import 'animate.css';
+import classnames from 'classnames';
 
 export default function ListItem({ result, user }) {
+  const handleDeleteBtn = () => {
+    fetch('/api/post/delete', {
+      method: 'DELETE',
+      body: result[index]._id,
+    }).then((response) => {
+      return response.json();
+    });
+  };
+
   return (
-    <div>
+    <div
+      className={classnames(
+        ListStyles['list-area'],
+        'animate__animated animate__fadeIn'
+      )}
+    >
       {result.map((element, index) => {
         const isAuthor = user.email === result[index].author;
         const isAdmin = user.role === 'admin';
 
         return (
-          <div className="list-item" key={index}>
-            <Link prefetch={false} href={`/detail/${result[index]._id}`}>
-              <h4>{result[index].title}</h4>
-            </Link>
-            <div>{result[index].author_name}</div>
+          <div className={ListStyles['list-item']} key={index}>
+            <button className={ListStyles['detail-btn']}>
+              <Link prefetch={false} href={`/detail/${result[index]._id}`}>
+                {result[index].title}
+              </Link>
+            </button>
+            <span className={ListStyles['author-name']}>
+              {result[index].author_name}
+            </span>
 
             {isAuthor && (
               <>
-                <button>
-                  <Link href={`/edit/${result[index]._id}`}>edit</Link>
+                <button className={ListStyles['edit-btn']}>
+                  <Link href={`/edit/${result[index]._id}`}>
+                    <Image src={editIcon} alt="edit" title="edit" />
+                  </Link>
                 </button>
                 <button
-                  onClick={(event) => {
-                    fetch('/api/post/delete', {
-                      method: 'DELETE',
-                      body: result[index]._id,
-                    })
-                      .then((response) => {
-                        return response.json();
-                      })
-                      .then(() => {
-                        event.target.parentElement.style.opacity = 0;
-                        setTimeout(() => {
-                          event.target.parentElement.style.display = 'none';
-                        }, 1000);
-                      });
-                  }}
+                  className={ListStyles['delete-btn']}
+                  onClick={() => handleDeleteBtn()}
                 >
-                  delete
+                  <Image src={deleteIcon} alt="delete" title="delete" />
                 </button>
               </>
             )}
@@ -46,23 +59,10 @@ export default function ListItem({ result, user }) {
             {isAdmin && (
               <>
                 <button
-                  onClick={(event) => {
-                    fetch('/api/post/delete', {
-                      method: 'DELETE',
-                      body: result[index]._id,
-                    })
-                      .then((response) => {
-                        return response.json();
-                      })
-                      .then(() => {
-                        event.target.parentElement.style.opacity = 0;
-                        setTimeout(() => {
-                          event.target.parentElement.style.display = 'none';
-                        }, 1000);
-                      });
-                  }}
+                  className={ListStyles['delete-btn']}
+                  onClick={() => handleDeleteBtn()}
                 >
-                  delete
+                  <Image src={deleteIcon} alt="delete" title="delete" />
                 </button>
               </>
             )}

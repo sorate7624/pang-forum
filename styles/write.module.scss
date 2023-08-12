@@ -1,0 +1,29 @@
+.wrapper {
+  form {
+    display: flex;
+    flex-flow: column;
+    max-width: 500px;
+    margin: 0 auto;
+    padding-top: 30px;
+
+    .input-text {
+      height: 50px;
+      margin-bottom: 30px;
+    }
+
+    .textarea {
+      height: 200px;
+      margin-bottom: 30px;
+    }
+
+    .submit-btn {
+      height: 50px;
+      background-color: $color-green5;
+      color: white;
+
+      &:hover {
+        background-color: $color-green4;
+      }
+    }
+  }
+}
