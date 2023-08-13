@@ -1,4 +1,4 @@
-import ErrorStyles from './../styles/error.module.scss';
+import ErrorStyles from '../styles/error.module.scss';
 
 export default function NotFound() {
   return (

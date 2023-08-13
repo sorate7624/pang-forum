@@ -3,7 +3,7 @@ import { connectDB } from '@/util/database';
 import { getServerSession } from 'next-auth';
 import Link from 'next/link';
 import ListItem from './ListItem';
-import ListStyles from './../../styles/list.module.scss';
+import ListStyles from '../../styles/list.module.scss';
 import LoginBtn from '../LoginBtn';
 import BackBtn from '../BackBtn';
 

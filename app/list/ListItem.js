@@ -1,7 +1,7 @@
 'use client';
 
 import Link from 'next/link';
-import ListStyles from './../../styles/list.module.scss';
+import ListStyles from '../../styles/list.module.scss';
 import Image from 'next/image';
 import editIcon from '@/public/edit.png';
 import deleteIcon from '@/public/delete.png';

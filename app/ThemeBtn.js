@@ -2,7 +2,7 @@
 
 import { useRouter } from 'next/navigation';
 import { useEffect, useState } from 'react';
-import NavbarStyles from './../styles/navbar.module.scss';
+import NavbarStyles from '../styles/navbar.module.scss';
 
 export default function ThemeBtn() {
   let router = useRouter();

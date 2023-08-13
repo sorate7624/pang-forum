@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import LoginBtn from './LoginBtn';
-import HomeStyles from './../styles/home.module.scss';
+import HomeStyles from '../styles/home.module.scss';
 import { getServerSession } from 'next-auth';
 import { authOptions } from '@/pages/api/auth/[...nextauth]';
 import HomeTitle from './HomeTitle';

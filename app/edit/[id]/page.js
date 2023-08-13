@@ -1,7 +1,7 @@
 import { connectDB } from '@/util/database';
 import { ObjectId } from 'bson';
 import BackBtn from '@/app/BackBtn';
-import EditStyles from './../../../styles/edit.module.scss';
+import EditStyles from '../../../styles/edit.module.scss';
 import 'animate.css';
 
 export default async function Edit({ params }) {

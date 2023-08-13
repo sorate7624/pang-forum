@@ -4,7 +4,7 @@ import { authOptions } from '@/pages/api/auth/[...nextauth]';
 import ThemeBtn from './ThemeBtn';
 import Image from 'next/image';
 import pangForum from '@/public/pang-forum.png';
-import NavbarStyles from './../styles/navbar.module.scss';
+import NavbarStyles from '../styles/navbar.module.scss';
 
 export default async function Navbar() {
   const session = await getServerSession(authOptions);

@@ -2,7 +2,7 @@ import { connectDB } from '@/util/database';
 import { ObjectId } from 'bson';
 import { notFound } from 'next/navigation';
 import Comment from './Comment';
-import DetailStyles from './../../../styles/detail.module.scss';
+import DetailStyles from '../../../styles/detail.module.scss';
 import 'animate.css';
 import classnames from 'classnames';
 import BackBtn from '@/app/BackBtn';

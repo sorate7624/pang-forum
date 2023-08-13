@@ -1,6 +1,6 @@
 'use client';
 import { useEffect, useState } from 'react';
-import DetailStyles from './../../../styles/detail.module.scss';
+import DetailStyles from '../../../styles/detail.module.scss';
 
 export default function Comment({ _id }) {
   let [comment, setComment] = useState('');
