@@ -1,4 +1,12 @@
 .wrapper {
+  .top-area {
+    position: relative;
+    display: flex;
+    max-width: 500px;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+  }
   form {
     display: flex;
     flex-flow: column;
@@ -43,7 +51,8 @@
 
       span {
         color: $color-green5;
-        opacity: 0.2;
+        opacity: 0.5;
+        font-weight: bold;
       }
     }
 

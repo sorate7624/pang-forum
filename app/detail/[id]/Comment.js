@@ -12,7 +12,6 @@ export default function Comment({ _id }) {
       .then((result) => {
         setData(result);
         setComment('');
-        console.log('result??', result);
       })
       .catch((error) => {
         console.error('댓글 목록 가져오기 실패', error);

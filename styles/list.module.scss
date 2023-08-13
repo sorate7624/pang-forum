@@ -131,4 +131,12 @@
   &:hover {
     animation: shake 4s ease infinite;
   }
+
+  @include mobile {
+    & {
+      top: 5px;
+      width: 25px;
+      height: 25px;
+    }
+  }
 }

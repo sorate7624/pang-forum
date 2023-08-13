@@ -1,5 +1,3 @@
-// 'use client';
-
 import Link from 'next/link';
 import LoginBtn from './LoginBtn';
 import HomeStyles from '../styles/home.module.scss';

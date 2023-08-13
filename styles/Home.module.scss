@@ -6,6 +6,19 @@
     transform: translate(-50%, -50%);
   }
 
+  @include mobile {
+    & {
+      display: grid;
+      place-items: center;
+    }
+    .inner {
+      position: inherit;
+      top: auto;
+      left: auto;
+      transform: none;
+    }
+  }
+
   h2 {
     font-size: 40px;
     color: $color-green5;

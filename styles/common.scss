@@ -1,6 +1,6 @@
 body {
   .wrapper {
-    height: 100%;
+    min-height: 100vh;
     background-color: $color-white;
     margin: 0 auto;
     padding-top: 180px;
@@ -9,12 +9,19 @@ body {
       max-width: 1280px;
       margin: 0 auto;
       text-align: center;
+      padding: 0 30px 80px;
     }
 
     .title {
       font-size: 40px;
       margin: 0 0 30px;
       color: $color-green5;
+    }
+
+    @include mobile {
+      .title {
+        font-size: 25px;
+      }
     }
 
     button {

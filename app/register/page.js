@@ -3,6 +3,7 @@
 import { useEffect, useState } from 'react';
 import RegisterStyles from '../../styles/register.module.scss';
 import 'animate.css';
+import BackBtn from '../BackBtn';
 
 export default function Register() {
   const [selectedRole, setSelectedRole] = useState('');
@@ -18,7 +19,10 @@ export default function Register() {
   return (
     <main className={RegisterStyles['wrapper']}>
       <div className={RegisterStyles['inner']}>
-        <h3 className={RegisterStyles['title']}>Register</h3>
+        <div className={RegisterStyles['top-area']}>
+          <BackBtn link="/" />
+          <h3 className={RegisterStyles['title']}>Register</h3>
+        </div>
         <form
           method="POST"
           action="/api/auth/signup"
