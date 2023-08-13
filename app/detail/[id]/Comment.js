@@ -1,10 +1,8 @@
 'use client';
-import { useRouter } from 'next/navigation';
 import { useEffect, useState } from 'react';
-import DetailStyles from '@/styles/detail.module.scss';
+import DetailStyles from './../../../styles/detail.module.scss';
 
 export default function Comment({ _id }) {
-  const router = useRouter();
   let [comment, setComment] = useState('');
   let [data, setData] = useState([]);
 

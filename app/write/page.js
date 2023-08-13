@@ -1,5 +1,5 @@
 'use client';
-import WriteStyles from '@/styles/write.module.scss';
+import WriteStyles from './../../styles/write.module.scss';
 import 'animate.css';
 import BackBtn from '../BackBtn';
 

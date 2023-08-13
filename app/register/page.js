@@ -1,7 +1,7 @@
 'use client';
 
 import { useEffect, useState } from 'react';
-import RegisterStyles from '@/styles/register.module.scss';
+import RegisterStyles from './../../styles/register.module.scss';
 import 'animate.css';
 
 export default function Register() {
