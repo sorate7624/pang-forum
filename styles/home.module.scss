@@ -1,0 +1,59 @@
+.wrapper {
+  .inner {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  h2 {
+    font-size: 40px;
+    color: $color-green5;
+    margin: 0 0 30px;
+  }
+
+  .btn-area {
+    display: flex;
+    justify-content: center;
+  }
+
+  button {
+    display: flex;
+    align-items: center;
+    background-color: $color-pastel-red;
+    color: $color-red;
+    margin-right: 10px;
+    height: 45px;
+
+    img {
+      width: 20px;
+      height: 20px;
+      margin-right: 10px;
+    }
+
+    &:hover {
+      background-color: $color-red;
+      color: $color-pastel-red;
+    }
+
+    &.register-btn {
+      color: $color-blue;
+      background-color: $color-pastel-blue;
+
+      &:hover {
+        background-color: $color-blue;
+        color: $color-pastel-blue;
+      }
+    }
+
+    &.list-btn {
+      color: $color-purple;
+      background-color: $color-pastel-purple;
+
+      &:hover {
+        background-color: $color-purple;
+        color: $color-pastel-purple;
+      }
+    }
+  }
+}
