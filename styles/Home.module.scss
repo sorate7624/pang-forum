@@ -45,5 +45,15 @@
         color: $color-pastel-blue;
       }
     }
+
+    &.list-btn {
+      color: $color-purple;
+      background-color: $color-pastel-purple;
+
+      &:hover {
+        background-color: $color-purple;
+        color: $color-pastel-purple;
+      }
+    }
   }
 }

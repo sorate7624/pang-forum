@@ -14,9 +14,7 @@ export default function LoginBtn() {
   return (
     <button
       onClick={() => {
-        signIn('', {
-          callbackUrl: router.push(`/list`),
-        });
+        signIn();
       }}
       onMouseEnter={() => {
         setIsHovering(true);

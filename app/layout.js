@@ -24,10 +24,14 @@ export default async function RootLayout({ children }) {
 
   return (
     <html lang="en">
-      <body
+      {/* <body
         className={`${roboto.className} ${notoSansKr.className} ${
           theme && theme.value === 'dark' ? 'dark-mode' : ''
         }`}
+      > */}
+      <body
+        className={`${roboto.className} ${notoSansKr.className}`}
+        theme={theme && theme.value === 'dark' ? 'dark' : ''}
       >
         <Navbar />
         {children}

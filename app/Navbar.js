@@ -1,4 +1,3 @@
-import Link from 'next/link';
 import LogoutBtn from './LogoutBtn';
 import { getServerSession } from 'next-auth';
 import { authOptions } from '@/pages/api/auth/[...nextauth]';

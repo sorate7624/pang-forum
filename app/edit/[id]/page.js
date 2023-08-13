@@ -1,5 +1,6 @@
 import { connectDB } from '@/util/database';
 import { ObjectId } from 'bson';
+import BackBtn from '@/app/BackBtn';
 import EditStyles from '@/styles/edit.module.scss';
 import 'animate.css';
 
@@ -12,7 +13,10 @@ export default async function Edit({ params }) {
   return (
     <main className={EditStyles['wrapper']}>
       <div className={EditStyles['inner']}>
-        <h3 className={EditStyles['title']}>Edit a post</h3>
+        <div className={EditStyles['top-area']}>
+          <BackBtn link="/list" />
+          <h3 className={EditStyles['title']}>Edit a post</h3>
+        </div>
         <form
           action="/api/post/edit"
           method="POST"

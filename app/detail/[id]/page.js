@@ -5,6 +5,7 @@ import Comment from './Comment';
 import DetailStyles from '@/styles/detail.module.scss';
 import 'animate.css';
 import classnames from 'classnames';
+import BackBtn from '@/app/BackBtn';
 
 export default async function Detail({ params }) {
   const db = (await connectDB).db('forum');
@@ -19,7 +20,10 @@ export default async function Detail({ params }) {
   return (
     <main className={DetailStyles['wrapper']}>
       <div className={DetailStyles['inner']}>
-        <h3 className={DetailStyles['title']}>Detail</h3>
+        <div className={DetailStyles['top-area']}>
+          <BackBtn link="/list" />
+          <h3 className={DetailStyles['title']}>Detail</h3>
+        </div>
         <div
           className={classnames(
             DetailStyles['detail-area'],

@@ -1,12 +1,16 @@
 'use client';
 import WriteStyles from '@/styles/write.module.scss';
 import 'animate.css';
+import BackBtn from '../BackBtn';
 
 export default function Write() {
   return (
     <main className={WriteStyles['wrapper']}>
       <div className={WriteStyles['inner']}>
-        <h3 className={WriteStyles['title']}>Write a post</h3>
+        <div className={WriteStyles['top-area']}>
+          <BackBtn link="/list" />
+          <h3 className={WriteStyles['title']}>Write a post</h3>
+        </div>
         <form
           action="/api/post/new"
           method="POST"

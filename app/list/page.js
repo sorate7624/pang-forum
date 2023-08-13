@@ -5,6 +5,7 @@ import Link from 'next/link';
 import ListItem from './ListItem';
 import ListStyles from '@/styles/list.module.scss';
 import LoginBtn from '../LoginBtn';
+import BackBtn from '../BackBtn';
 
 export const dynamic = 'force-dynamic';
 
@@ -18,9 +19,12 @@ export default async function List() {
       <div className={ListStyles['inner']}>
         {session ? (
           <>
-            <button className={ListStyles['write-btn']}>
-              <Link href="/write">Write a post</Link>
-            </button>
+            <div className={ListStyles['top-area']}>
+              <BackBtn link="/" />
+              <button className={ListStyles['write-btn']}>
+                <Link href="/write">Write a post</Link>
+              </button>
+            </div>
             <ListItem result={result} user={session.user} />
           </>
         ) : (

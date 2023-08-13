@@ -1,6 +1,31 @@
+@keyframes shake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: translateX(-3px);
+  }
+  20%,
+  40%,
+  60%,
+  80% {
+    transform: translateX(3px);
+  }
+}
+
 .wrapper {
-  .back-btn {
-    margin-right: auto;
+  .top-area {
+    position: relative;
+    display: flex;
+    max-width: 500px;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
   }
   .write-btn {
     background-color: $color-green2;
@@ -86,5 +111,24 @@
         color: $color-pastel-red;
       }
     }
+  }
+}
+
+.back-btn {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50px;
+  height: 50px;
+  padding: 0 !important;
+  cursor: pointer;
+
+  img {
+    width: 100%;
+    height: 100%;
+  }
+
+  &:hover {
+    animation: shake 4s ease infinite;
   }
 }

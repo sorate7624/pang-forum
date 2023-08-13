@@ -61,3 +61,28 @@ body {
     }
   }
 }
+
+// dark mode
+body {
+  &[theme='dark'] {
+    .navbar {
+      background-color: #333;
+    }
+
+    .wrapper {
+      background-color: #4b4b4b;
+    }
+
+    .detail-content,
+    .comment-area {
+      color: $color-white;
+    }
+
+    .input-text,
+    .textarea,
+    .comment-input-area input {
+      background-color: #6d6d6d;
+      color: $color-white;
+    }
+  }
+}
