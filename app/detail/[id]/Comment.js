@@ -11,12 +11,11 @@ export default function Comment({ _id }) {
       .then((response) => response.json())
       .then((result) => {
         setData(result);
-        setComment('');
       })
       .catch((error) => {
         console.error('댓글 목록 가져오기 실패', error);
       });
-  }, []);
+  }, [data]);
 
   const submitComment = () => {
     fetch('/api/comment/new', {
@@ -25,9 +24,8 @@ export default function Comment({ _id }) {
     })
       .then((response) => response.json())
       .then((newComment) => {
-        console.log('newComment', newComment);
-        setData((prevData) => [newComment, ...prevData]);
         setComment('');
+        setData((prevData) => [newComment, ...prevData]);
       })
       .catch((error) => {
         console.error('댓글 등록 실패', error);
@@ -58,7 +56,7 @@ export default function Comment({ _id }) {
       <div className={DetailStyles['comment-input-area']}>
         <input
           type="text"
-          defaultValue={comment}
+          value={comment}
           onChange={(event) => {
             setComment(event.target.value);
           }}
