@@ -24,8 +24,8 @@ export default async function handler(request, response) {
         return response.status(400).json({ code: '400', result: 'failed' });
       }
       let result = await db.collection('user_cred').insertOne(request.body);
-      // return response.status(200).json('가입 성공');
-      return response.status(200).redirect('/list');
+      console.log('result', result);
+      return response.redirect(302, '/list');
     } catch (error) {
       console.log('error', error);
     }

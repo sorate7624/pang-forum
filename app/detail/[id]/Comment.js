@@ -25,7 +25,6 @@ export default function Comment({ _id }) {
     })
       .then((response) => response.json())
       .then((newComment) => {
-        // 새로운 댓글 정보를 기존 데이터 앞에 추가
         console.log('newComment', newComment);
         setData((prevData) => [newComment, ...prevData]);
         setComment('');

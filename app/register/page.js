@@ -8,9 +8,9 @@ import BackBtn from '../BackBtn';
 export default function Register() {
   const [selectedRole, setSelectedRole] = useState('');
   const namePattern = '[a-zA-Zㄱ-ㅎㅏ-ㅣ가-힣]*';
-  const emailPattern = '[w.+-]+@[w.-]+.w+';
+  const emailPattern = '^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+.[a-zA-Z]{2,4}$';
   const passwordPattern =
-    '^(?=.*[0-9])(?=.*[a-zA-Z])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{8,}$';
+    '^(?=.*[0-9])(?=.*[a-zA-Z])(?=.*[~!@#$%^&*()_+])[a-zA-Z0-9~!@#$%^&*()_+]{8,}$';
 
   useEffect(() => {
     setSelectedRole('user');

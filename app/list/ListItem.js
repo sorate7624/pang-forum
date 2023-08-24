@@ -9,13 +9,19 @@ import 'animate.css';
 import classnames from 'classnames';
 
 export default function ListItem({ result, user }) {
-  const handleDeleteBtn = () => {
-    fetch('/api/post/delete', {
-      method: 'DELETE',
-      body: result[index]._id,
-    }).then((response) => {
-      return response.json();
-    });
+  const handleDeleteBtn = (index) => {
+    if (confirm('정말로 삭제하시겠습니까?')) {
+      fetch('/api/post/delete', {
+        method: 'DELETE',
+        body: result[index]._id,
+      })
+        .then((response) => {
+          return response.json();
+        })
+        .then(() => {
+          window.location.reload();
+        });
+    }
   };
 
   return (
@@ -49,7 +55,7 @@ export default function ListItem({ result, user }) {
                 </button>
                 <button
                   className={ListStyles['delete-btn']}
-                  onClick={() => handleDeleteBtn()}
+                  onClick={() => handleDeleteBtn(index)}
                 >
                   <Image src={deleteIcon} alt="delete" title="delete" />
                 </button>
@@ -60,7 +66,7 @@ export default function ListItem({ result, user }) {
               <>
                 <button
                   className={ListStyles['delete-btn']}
-                  onClick={() => handleDeleteBtn()}
+                  onClick={() => handleDeleteBtn(index)}
                 >
                   <Image src={deleteIcon} alt="delete" title="delete" />
                 </button>
