@@ -44,16 +44,10 @@
 ### Development
 
 <div style="display: flex">
-  next.js
   <img src="https://img.shields.io/badge/next.js-000000?style=for-the-badge&logo=next.js&logoColor=white">
-  scss
+  <img src="https://img.shields.io/badge/reactRouter-CA4245?style=for-the-badge&logo=reactRouter&logoColor=white">
   <img src="https://img.shields.io/badge/scss-CC6699?style=for-the-badge&logo=scss&logoColor=white">
-  animate.css
   <img src="https://img.shields.io/badge/animate.css-FCE5CD?style=for-the-badge&logo=animate.css&logoColor=341C75">
-  <img src="https://img.shields.io/badge/react custom hook-79E3EB?style=for-the-badge&logo=reactCustomHook&logoColor=white">
-  <img src="https://img.shields.io/badge/react svg worldmap-0E9017?style=for-the-badge&logo=reactSvgWorldmap&logoColor=white">
-  <img src="https://img.shields.io/badge/country locale map-7B38BA?style=for-the-badge&logo=countryLocaleMap&logoColor=white">
-  <img src="https://img.shields.io/badge/react device detect-F1E05A?style=for-the-badge&logo=reactDeviceDetect&logoColor=white">
   <br/>
 </div>
 
@@ -74,8 +68,8 @@
   <img src="https://img.shields.io/badge/npm-CB3837?style=for-the-badge&logo=npm&logoColor=white">
   <img src="https://img.shields.io/badge/postcss-DD3A0A?style=for-the-badge&logo=postcss&logoColor=white">
   <img src="https://img.shields.io/badge/next env-ECD53F?style=for-the-badge&logo=nextEnv&logoColor=white">
-  <img src="https://img.shields.io/badge/next config-000000?style=for-the-badge&logo=nextConfig&logoColor=white">
-  <img src="https://img.shields.io/badge/tsconfig-3178C6?style=for-the-badge&logo=tsconfig&logoColor=white">
+  <img src="https://img.shields.io/badge/middleware-75AF4D?style=for-the-badge&logo=middleware&logoColor=white">
+  <img src="https://img.shields.io/badge/jsconfig-55B6C2?style=for-the-badge&logo=jsconfig&logoColor=white">
   <br/>
 </div>
 
