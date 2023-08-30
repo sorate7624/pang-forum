@@ -9,6 +9,9 @@
 [https://pang-forum2.vercel.app/](https://pang-forum2.vercel.app/)
 
 ![pang-forum](./pang-forum.png)
+![pang-forum-dark](./pang-forum-dark.png)
+![pang-forum-list](./pang-forum-list.png)
+![pang-forum-detail](./pang-forum-detail.png)
 
 ## 설치 방법
 
